@@ -8,4 +8,4 @@ router.get('/', smsCtrl.createSms);
 router.post('/respond', smsCtrl.respondSms);
 
 
-module.exports = router;
+module.exports = router;gti
