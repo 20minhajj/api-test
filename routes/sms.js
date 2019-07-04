@@ -4,7 +4,8 @@ const router = express.Router();
 
 const smsCtrl = require('../controllers/sms');
 
-router.get('/', smsCtrl.createSms);
+router.get('/' , smsCtrl.getAllSms);
+router.post('/sender', smsCtrl.createSms);
 router.post('/respond', smsCtrl.respondSms);
 
 
