@@ -52,3 +52,17 @@ exports.respondSms = (req, res, next) => {
   );
 }
 
+exports.getAllSms = (req, res, next) => {
+  Sms.find().then(
+    (txt) => {
+      res.status(200).json(txt);
+    }
+  ).catch(
+    (error) => {
+      res.status(400).json({
+        error: error
+      });
+    }
+  );
+};
+
